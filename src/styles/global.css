@@ -1,3 +1,15 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+
+/* Define custom properties for fonts */
+:root {
+  --font-primary: 'InterVariable', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+}
+
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -118,7 +130,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-secondary);
   }
+
+  html {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+}
+
+/* Utility classes for Tailwind */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
 }
